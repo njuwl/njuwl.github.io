@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>统计数据查询</title>
+    <link rel="stylesheet" href="styles/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+  </head>
+  <body>
+    <h1>**统计数据非官方查询系统 v1.0</h1>
+    <form>
+      <fieldset>
+      <legend>必要信息</legend>
+        User:<input type="text" name="User">
+        Key:<input type="text" name="Key">
+        IP:<input type="text" name="ip">
+      </fieldset>
+      <br>
+      <fieldset>
+      <legend>查询条件</legend>
+      ID:<input type="text" name="ID">
+      <!--PassWord:<input name="security" value="不是游戏密码！">-->
+      查询项目:
+      <select>
+          <option>钻石矿石</option>
+          <option>金矿石</option>
+          <option>铁矿石</option>
+          <option>煤矿石</option>
+          <option>青金石矿石</option>
+          <option>圆石</option>
+      </select>
+      起始日期:<input type="text" id="start_date"/>
+      截止日期:<input type="date" id="end_date"/>
+      <input type="submit" value="查询">
+      </fieldset>
+    </form><br>
+    <p>建设中...</p>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $("#start_date").datepicker({dateFormat:"yy-mm-dd"});
+            $("#end_date").datepicker({dateFormat:"yy-mm-dd"});
+        });
+    </script>
+
+  </body>
+</html>
